@@ -9,19 +9,20 @@ canvas.frameRate = 30
 canvas.color = .white
 PlaygroundPage.current.liveView = canvas
 
-canvas.drawing { 🐢 in 
+canvas.drawing { 🐢 in
     🐢.penColor(.red)
     🐢.fillColor(.orange)
-
+    
     🐢.penUp()
     🐢.back(100)
     🐢.penDown()
- 
-    // Turtle Star!
-    🐢.beginFill()
-    🐢.repeat(36) {
-        🐢.forward(200)
-        🐢.left(170)
-    }
-    🐢.endFill()
+    
+    
+    🐢.goto(0,150)
+    🐢.goto(0,-150)
+    🐢.goto(0,0)
+    🐢.goto(150,0)
+    🐢.goto(-150,0)
+    🐢.goto(0,0)
 }
+

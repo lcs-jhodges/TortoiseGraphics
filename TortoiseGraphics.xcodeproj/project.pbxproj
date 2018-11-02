@@ -40,6 +40,7 @@
 		14C3A09D201CA62000C7A28C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C3A09C201CA62000C7A28C /* Shape.swift */; };
 		14D753A91FE173C80038F931 /* CommandFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D753A81FE173C80038F931 /* CommandFill.swift */; };
 		14D753AB1FE17D290038F931 /* Vec2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D753AA1FE17D290038F931 /* Vec2D.swift */; };
+		BC77DA0421824F25007DBBE9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC77DA0321824F25007DBBE9 /* Extensions.swift */; };
 		OBJ_109 /* TortoiseGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* TortoiseGraphics.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		14C3A09C201CA62000C7A28C /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		14D753A81FE173C80038F931 /* CommandFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandFill.swift; sourceTree = "<group>"; };
 		14D753AA1FE17D290038F931 /* Vec2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vec2D.swift; sourceTree = "<group>"; };
+		BC77DA0321824F25007DBBE9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = /Users/jhodges/Desktop/School/Computer_Science/TortoiseGraphics/Sources/Extensions.swift; sourceTree = "<absolute>"; };
 		OBJ_53 /* TortoiseGraphics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TortoiseGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_54 /* TortoiseGraphicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = TortoiseGraphicsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BC77DA0321824F25007DBBE9 /* Extensions.swift */,
 				1456315F1FE4863200B3B2A9 /* Canvas.swift */,
 				145624971EDAA48D00173B9A /* ImageCanvas.swift */,
 				14B44CDE1FE557C300E0144B /* GraphicsCanvas.swift */,
@@ -292,6 +295,7 @@
 				1442EC7C1EE05EFA00B03BCC /* CommandCircle.swift in Sources */,
 				142F5C921EDC5C30008BEFAB /* CommandDot.swift in Sources */,
 				142F5C8E1EDC5A94008BEFAB /* CommandSetHeading.swift in Sources */,
+				BC77DA0421824F25007DBBE9 /* Extensions.swift in Sources */,
 				142F5C951EDC6077008BEFAB /* CommandPenDown.swift in Sources */,
 				1456315E1FE4809D00B3B2A9 /* PlaygroundCanvas.swift in Sources */,
 				14588D181EDF042300922BE4 /* CommandColor.swift in Sources */,

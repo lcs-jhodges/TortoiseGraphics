@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='raw'>
+<playground version='6.0' target-platform='macos' display-mode='raw' executeOnSourceChanges='false'>
     <pages>
-        <page name='With a tortoise'/>
+        <page name='Oct. 16, ex.1'/>
         <page name='With 2 tortoises'/>
+        <page name='Oct. 16, ex.2'/>
+        <page name='Oct. 16, ex.3'/>
+        <page name='Starter Code'/>
+        <page name='name'/>
     </pages>
 </playground>
