@@ -68,4 +68,19 @@ public extension Tortoise {
         self.curve(withSides: 200, withSize: 20, drawSides: 1)
         self.curve(withSides: -40, withSize: 5, drawSides: 2)
     }
+    func uppercaseH() {
+        self.left(90)
+        self.curve(withSides: 20, withSize: 4, drawSides: 8)
+        self.curve(withSides: 200, withSize: 8, drawSides: 10)
+        self.right(180)
+        self.curve(withSides: -200, withSize: 8, drawSides: 5)
+        self.right(90)
+        self.curve(withSides: 200, withSize: 8, drawSides: 3)
+        self.left(90)
+        self.curve(withSides: -200, withSize: 8, drawSides: 6)
+        self.right(185)
+        self.curve(withSides: -1000, withSize: 8, drawSides: 9)
+        self.curve(withSides: -20, withSize: 4, drawSides: 8)
+    }
+
 }
