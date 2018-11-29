@@ -75,20 +75,28 @@ func stickman(with t: Tortoise, size: Double) {
     vee(with: t, size: size)
     t.forward(size)
     t.left(90)
+    t.right(180)
     arc(with: t, radius: size, angle: 360)
     t.right(90)
+    t.right(180)
 }
 
 func boy(with t : Tortoise) {
+    t.penUp()
     t.goto(-130, 0)
+    t.penDown()
     stickman(with: t, size: 50)
 }
 func junior(with t : Tortoise) {
+    t.penUp()
     t.goto(80, -40)
+    t.penDown()
     stickman(with: t, size: 30)
 }
 func adult(with t : Tortoise){
+    t.penUp()
     t.goto(-20, -10)
+    t.penDown()
     stickman(with: t, size: 43)
 }
 
@@ -102,6 +110,7 @@ canvas.drawing { turtle in
     
     turtle.penSize(6)
     drawPeople(with: turtle)
+    turtle.hideTortoise()
     
 }
 
