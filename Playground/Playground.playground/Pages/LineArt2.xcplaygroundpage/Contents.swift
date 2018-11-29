@@ -84,18 +84,21 @@ func stickman(with t: Tortoise, size: Double) {
 }
 
 func boy(with t : Tortoise) {
+    t.penColor(.purple)
     t.penUp()
     t.goto(-130, 0)
     t.penDown()
     stickman(with: t, size: 50)
 }
 func junior(with t : Tortoise) {
+    t.penColor(.red)
     t.penUp()
     t.goto(80, -40)
     t.penDown()
     stickman(with: t, size: 30)
 }
 func adult(with t : Tortoise){
+    t.penColor(.blue)
     t.penUp()
     t.goto(-20, -10)
     t.penDown()
