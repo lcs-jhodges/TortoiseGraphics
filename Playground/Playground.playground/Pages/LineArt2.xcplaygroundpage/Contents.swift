@@ -5,7 +5,7 @@ import CoreGraphics
 let myFrame = CGRect(x: 0, y: 0, width: 800, height: 600)
 let canvas = PlaygroundCanvas(frame: myFrame)
 canvas.frameRate = 144
-canvas.color = .black
+canvas.color = .white
 PlaygroundPage.current.liveView = canvas
 
 /**
@@ -49,23 +49,34 @@ func arc(with t : Tortoise, radius r : Double, angle : Int) {
 
 
 
-func arm(with t:Tortoise, size:Double){
-    turtle.forward(size: 3)
-    turtle.left(90)
-    turtle.arc
+func arm(with t:Tortoise, size:Double) {
+    t.forward(size * 3)
+    t.left(90)
+    arc(with: t, radius: size / 3, angle: 360)
+    t.right(90)
+    t.back(size * 3)
+    
 }
 
-func vee(with t: Tortoise, size:Double){
-    turtle.left(45)
-    arm()
+func vee(with t: Tortoise, size: Double){
+    t.left(45)
+    arm(with: t, size: size)
     t.right(90)
-    arm()
+    arm(with: t, size: size)
     t.left(45)
 }
 
-func stickman(with t: Tortoise, size:Double) {
-    turtle.right(180)
-    turtle.forward(size)
+func stickman(with t: Tortoise, size: Double) {
+    t.right(180)
+    t.forward(size)
+    vee(with: t, size: size)
+    t.right(180)
+    t.forward(size * 2)
+    vee(with: t, size: size)
+    t.forward(size)
+    t.left(90)
+    arc(with: t, radius: size, angle: 360)
+    t.right(90)
 }
 
 func boy(with t : Tortoise) {
@@ -83,13 +94,14 @@ func adult(with t : Tortoise){
 
 func drawPeople(with t : Tortoise) {
     boy(with: t)
-    adult()
-    junior()
+    adult(with: t)
+    junior(with: t)
 }
 
 canvas.drawing { turtle in
     
-    turtle.penSize = 6
+    turtle.penSize(6)
+    drawPeople(with: turtle)
     
 }
 
