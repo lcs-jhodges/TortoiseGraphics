@@ -52,7 +52,9 @@ func arc(with t : Tortoise, radius r : Double, angle : Int) {
 func arm(with t:Tortoise, size:Double) {
     t.forward(size * 3)
     t.left(90)
+    t.right(180)
     arc(with: t, radius: size / 3, angle: 360)
+    t.right(180)
     t.right(90)
     t.back(size * 3)
     
