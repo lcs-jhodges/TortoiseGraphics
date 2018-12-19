@@ -2,10 +2,13 @@ import PlaygroundSupport
 import TortoiseGraphics
 import CoreGraphics
 
+
+
+
 let myFrame = CGRect(x: 0, y: 0, width: 800, height: 600)
 let canvas = PlaygroundCanvas(frame: myFrame)
 canvas.frameRate = 144
-canvas.color = .white
+canvas.color = .blue
 PlaygroundPage.current.liveView = canvas
 
 /**
@@ -47,11 +50,29 @@ func arc(with t : Tortoise, radius r : Double, angle : Int) {
     t.right(stepAngle / 2)
 }
 
+func flower (with t: Tortoise) {
+    var box1 = 5
+    var box2 = 1
+    for _ in 1...30{
+    arc(with: t, radius: box1, angle: 120)
+    arc(with: t, radius: box1 / 5, angle: 90)
+    box1 = box1 + box2
+    arc(with: t, radius: box1, angle: 90)
+    box1 = box1 + box2
+
+
+
+
+    }
+    
+}
+
 func xline(with t: Tortoise, y:Double) {
     var x = -250
     for _ in 1...4{
         t.goto(x, y)
         x += 170
+        flower(with: t)
     }
     
 }
@@ -62,14 +83,14 @@ func blueprint (with t: Tortoise) {
     t.penSize(1)
     var y = 180
     for x in 1...3{
-        xline(with: t, y: y)
+        xline(with: t, y: y-175)
     }
     
 }
 canvas.drawing { turtle in
     
     turtle.penSize(6)
-    drawPeople(with: turtle)
+    blueprint(with t)
     turtle.hideTortoise()
     
 }
