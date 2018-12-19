@@ -11,6 +11,7 @@ canvas.frameRate = 144
 canvas.color = .blue
 PlaygroundPage.current.liveView = canvas
 
+
 /**
  Draws `n` line segments.
  
@@ -51,8 +52,8 @@ func arc(with t : Tortoise, radius r : Double, angle : Int) {
 }
 
 func flower (with t: Tortoise) {
-    var box1 = 5
-    var box2 = 1
+    var box1 = 5.0
+    let box2 = 1.0
     for _ in 1...30{
     arc(with: t, radius: box1, angle: 120)
     arc(with: t, radius: box1 / 5, angle: 90)
@@ -68,9 +69,11 @@ func flower (with t: Tortoise) {
 }
 
 func xline(with t: Tortoise, y:Double) {
-    var x = -250
+    var x = -250.0
     for _ in 1...4{
+        t.penUp()
         t.goto(x, y)
+        t.penDown()
         x += 170
         flower(with: t)
     }
@@ -79,9 +82,9 @@ func xline(with t: Tortoise, y:Double) {
 
 
 func blueprint (with t: Tortoise) {
-    t.penColor(.blue)
+    t.penColor(.white)
     t.penSize(1)
-    var y = 180
+    var y = 180.0
     for x in 1...3{
         xline(with: t, y: y-175)
     }
@@ -90,7 +93,7 @@ func blueprint (with t: Tortoise) {
 canvas.drawing { turtle in
     
     turtle.penSize(6)
-    blueprint(with t)
+    blueprint(with: turtle)
     turtle.hideTortoise()
     
 }
